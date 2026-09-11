@@ -1,0 +1,27 @@
+{
+  "design_status": "Specified before executing the benchmark; designed mechanical counterexample, not an external validation dataset.",
+  "seed": 20260910,
+  "units": {"displacement":"mm", "force":"N", "stiffness":"N/mm"},
+  "members": [[12.0,1.2,0.6],[4.0,2.0,0.4]],
+  "parameter_order": ["k", "Y", "H"],
+  "preload": 0.8,
+  "gains": [1.0,2.0],
+  "frame_stiffness": 20.0,
+  "probe_displacement": 0.45,
+  "probe_noise_sd": 0.15,
+  "target_legs": [[0.0,1.2,241],[1.2,0.15,211],[0.15,0.9,151]],
+  "virtual_records": 512,
+  "sweep": {"stiffness_ratios":[2.0,3.0,4.0], "target_gains":[1.5,2.0,3.0], "preloads":[0.65,0.8,0.95]},
+  "noise_sensitivity": [0.05,0.15,0.30],
+  "methods": {
+    "point": "Posterior mean parameters, with the entire common loading history replayed. Strong point control.",
+    "parameter_only": "Exact joint parameter posterior, but virgin states at transfer. Explicit history-removal ablation, not all Bayesian methods.",
+    "unpaired": "Exact parameter and state marginals, independently recombined at transfer. Removes persistent parameter-state association.",
+    "pact": "Exact joint parameter-state law, with each realization continued from its committed state.",
+    "bayes_replay": "Exact joint parameter posterior plus full deterministic history replay. Equivalence control."
+  },
+  "conditioning": "All methods receive the identical posterior weights computed with one common physical observation operator, prior and Gaussian likelihood. No method-specific fit. Before the probe the weights are exactly one half by permutation symmetry.",
+  "scores": ["trajectory_RMSE_N", "trajectory_energy_score_N", "90_percent_marginal_coverage", "90_percent_marginal_width_N", "distance_to_exact_conditional_mean_N"],
+  "evaluation": "Initial transfer predicts the full target. After one probe, score only later target increments; the probe is excluded. Virtual truths are independent branch draws and probe noise. No experimental accuracy claim.",
+  "verification": ["independent piecewise-linear equilibrium oracle", "committed-state immutability", "algorithmic tangent finite differences away from switches", "exact work/storage/dissipation by event splitting", "increment halving", "exact Bayesian replay equivalence", "symmetry and virgin controls"]
+}
