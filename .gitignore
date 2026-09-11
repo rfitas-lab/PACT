@@ -1,0 +1,5 @@
+__pycache__/
+*.py[cod]
+.venv/
+applications_20260909/new_c/
+applications_20260909/research_inputs/
