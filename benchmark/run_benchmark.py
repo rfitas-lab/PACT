@@ -171,6 +171,7 @@ def run():
             minus=numerical(T[j],parent,[u-eps],gains,kf)[0,2]
             checks['tangent_max_relative_error']=max(checks['tangent_max_relative_error'],float(abs((plus-minus)/(2*eps)-r[idx,3])/max(1,abs(r[idx,3]))))
         checks[f'energy_branch_{j}']=energy_balance(T[j],P[j],U,gains,kf)
+    # Null controls isolate the symmetry and the loss of history.
     sym=family(theta,h,np.ones(2),U,kf)
     virgin=family(theta,0,gains,U,kf)
     identical=family(np.array([theta[0],theta[0]]),h,gains,U,kf)
@@ -191,6 +192,7 @@ def run():
         sc=np.mean([score(curves,weights,truth[j]) for j in [0,1]],axis=0)
         initial_scores[m]={**dict(zip(['RMSE_N','energy_score_N','coverage90','width90_N'],map(float,sc))),
                            'conditional_mean_error_N':float(rms(weights@curves-w@truth))}
+    # Pre-specified synthetic cohort; each method sees the same posterior.
     rng=np.random.default_rng(CFG['seed']); n=CFG['virtual_records']
     labels=rng.integers(0,2,n); noise=rng.standard_normal(n); probe=truth[:,probeidx]
     after=slice(probeidx+1,None); rows=[]; representative={}; boot={}; pooled={}
@@ -210,6 +212,7 @@ def run():
             pooled[str(sigma)][m]={**dict(zip(['RMSE_N','energy_score_N','coverage90','width90_N'],map(float,means))),
                                    'conditional_mean_error_N':float(np.mean(means_by_m[m]))}
         if np.isclose(sigma,CFG['probe_noise_sd']):
+            # Paired 2000-replicate bootstrap for energy-score improvement.
             brng=np.random.default_rng(CFG['seed']+1)
             inds=brng.integers(0,n,(2000,n))
             for m in METHODS:
@@ -227,6 +230,8 @@ def run():
         for m,(cc,ww) in pred.items():
             sc=np.mean([score(cc,ww,ff[2][j]) for j in [0,1]],axis=0)
             sweep.append([ratio,a2,hh,m,*sc,rms(ww@cc-ff[2].mean(axis=0))])
+    # A transparent representative probe: observation equals branch A's
+    # noiseless prediction. No selection from the random cohort.
     wprobe=posterior(probe[0],probe,CFG['probe_noise_sd'])
     postrep=atomic_predictions(fam,wprobe,U,gains,kf,h)
     arrays={'U':U,'truth':truth,'states_at_transfer':P,'source_q':q,'source_R':F0,
@@ -243,7 +248,7 @@ def run():
              'preload_states_mm':P.tolist(),'probe_values_N':probe.tolist(),
              'probe_posterior_A':wprobe.tolist(),'trajectory_diameter_N':diameter,
              'minimax_point_error_bound_N':diameter/2,
-             'maximum_branch_separation_N':float(np.max(abs(truth[0]-truth[1])),),
+             'maximum_branch_separation_N':float(np.max(abs(truth[0]-truth[1]))),
              'initial':initial_scores,'conditioned':pooled,'paired_bootstrap':boot,
              'checks':checks,'sweep_cases':len(sweep)//len(METHODS),'virtual_records_per_noise':n}
     (out/'summary.json').write_text(json.dumps(summary,indent=2)+'\n')
