@@ -1,0 +1,234 @@
+{
+  "protocol_sha256": "a621d8846bf7ded4d5260cb9a1bf7af906411b74f87ace28b4c2124cfe36a410",
+  "preload_states_mm": [
+    [
+      0.6666666666666667,
+      0.2727272727272727
+    ],
+    [
+      0.2727272727272727,
+      0.6666666666666667
+    ]
+  ],
+  "probe_values_N": [
+    2.787878787878788,
+    1.7525252525252495
+  ],
+  "probe_posterior_A": [
+    0.9999999999548606,
+    4.5139410508711974e-11
+  ],
+  "trajectory_diameter_N": 0.5507241055455531,
+  "minimax_point_error_bound_N": 0.27536205277277653,
+  "maximum_branch_separation_N": 1.6136363636363635,
+  "initial": {
+    "point": {
+      "RMSE_N": 0.4400141194927063,
+      "energy_score_N": 0.4400141194927063,
+      "coverage90": 0.27287853577371046,
+      "width90_N": 0.0,
+      "conditional_mean_error_N": 0.3452529973147383
+    },
+    "parameter_only": {
+      "RMSE_N": 0.9564902821388466,
+      "energy_score_N": 0.8643302220280611,
+      "coverage90": 0.6339434276206323,
+      "width90_N": 0.37439775823901783,
+      "conditional_mean_error_N": 0.9282246048051641
+    },
+    "unpaired": {
+      "RMSE_N": 0.33552730479793896,
+      "energy_score_N": 0.20703661783496718,
+      "coverage90": 1.0,
+      "width90_N": 0.9914987884217172,
+      "conditional_mean_error_N": 0.19184246475250985
+    },
+    "pact": {
+      "RMSE_N": 0.2753620527727766,
+      "energy_score_N": 0.13768102638638827,
+      "coverage90": 1.0,
+      "width90_N": 0.40215280743677784,
+      "conditional_mean_error_N": 0.0
+    },
+    "bayes_replay": {
+      "RMSE_N": 0.2753620527727766,
+      "energy_score_N": 0.13768102638638827,
+      "coverage90": 1.0,
+      "width90_N": 0.40215280743677784,
+      "conditional_mean_error_N": 0.0
+    }
+  },
+  "conditioned": {
+    "0.05": {
+      "point": {
+        "RMSE_N": 0.0,
+        "energy_score_N": 0.0,
+        "coverage90": 1.0,
+        "width90_N": 0.0,
+        "conditional_mean_error_N": 1.6290239994402437e-70
+      },
+      "parameter_only": {
+        "RMSE_N": 0.5526676856822209,
+        "energy_score_N": 0.5526676856822209,
+        "coverage90": 0.7402113970588287,
+        "width90_N": 0.0,
+        "conditional_mean_error_N": 0.5526676856822184
+      },
+      "unpaired": {
+        "RMSE_N": 7.547071990765653e-137,
+        "energy_score_N": 3.657671271965713e-99,
+        "coverage90": 1.0,
+        "width90_N": 0.0,
+        "conditional_mean_error_N": 1.6290239994402437e-70
+      },
+      "pact": {
+        "RMSE_N": 1.629023999440244e-70,
+        "energy_score_N": 0.0,
+        "coverage90": 1.0,
+        "width90_N": 0.0,
+        "conditional_mean_error_N": 0.0
+      },
+      "bayes_replay": {
+        "RMSE_N": 1.629023999440244e-70,
+        "energy_score_N": 0.0,
+        "coverage90": 1.0,
+        "width90_N": 0.0,
+        "conditional_mean_error_N": 0.0
+      }
+    },
+    "0.15": {
+      "point": {
+        "RMSE_N": 0.0001529654161685744,
+        "energy_score_N": 0.0001529654161685744,
+        "coverage90": 0.7438878676470577,
+        "width90_N": 0.0,
+        "conditional_mean_error_N": 0.00015097076230876594
+      },
+      "parameter_only": {
+        "RMSE_N": 0.5526508438726246,
+        "energy_score_N": 0.5526246800321752,
+        "coverage90": 0.7402113970588287,
+        "width90_N": 0.0,
+        "conditional_mean_error_N": 0.5526527969254904
+      },
+      "unpaired": {
+        "RMSE_N": 8.160737562386587e-05,
+        "energy_score_N": 4.2106629835062354e-06,
+        "coverage90": 1.0,
+        "width90_N": 9.367932228379222e-05,
+        "conditional_mean_error_N": 6.440363589557499e-05
+      },
+      "pact": {
+        "RMSE_N": 3.7300970597769506e-05,
+        "energy_score_N": 1.1780040231600067e-06,
+        "coverage90": 1.0,
+        "width90_N": 0.0,
+        "conditional_mean_error_N": 0.0
+      },
+      "bayes_replay": {
+        "RMSE_N": 3.7300970597769506e-05,
+        "energy_score_N": 1.1780040231600067e-06,
+        "coverage90": 1.0,
+        "width90_N": 0.0,
+        "conditional_mean_error_N": 0.0
+      }
+    },
+    "0.3": {
+      "point": {
+        "RMSE_N": 0.06126367814557143,
+        "energy_score_N": 0.06126367814557143,
+        "coverage90": 0.2370940563725504,
+        "width90_N": 0.0,
+        "conditional_mean_error_N": 0.05240663087751096
+      },
+      "parameter_only": {
+        "RMSE_N": 0.5568547236089118,
+        "energy_score_N": 0.5449981977960724,
+        "coverage90": 0.7390012254902006,
+        "width90_N": 0.08052398955523704,
+        "conditional_mean_error_N": 0.5522134962229072
+      },
+      "unpaired": {
+        "RMSE_N": 0.038817893782752674,
+        "energy_score_N": 0.0170763890411848,
+        "coverage90": 0.9951286764705881,
+        "width90_N": 0.19292757958120502,
+        "conditional_mean_error_N": 0.026657645727828642
+      },
+      "pact": {
+        "RMSE_N": 0.02645405968992502,
+        "energy_score_N": 0.011502213692509112,
+        "coverage90": 0.9966835171568627,
+        "width90_N": 0.07226658118392285,
+        "conditional_mean_error_N": 0.0
+      },
+      "bayes_replay": {
+        "RMSE_N": 0.02645405968992502,
+        "energy_score_N": 0.011502213692509112,
+        "coverage90": 0.9966835171568627,
+        "width90_N": 0.07226658118392285,
+        "conditional_mean_error_N": 0.0
+      }
+    }
+  },
+  "paired_bootstrap": {
+    "point": {
+      "energy_score_difference_N": 0.00015178741214541444,
+      "paired_95_percent_interval_N": [
+        4.705515711321003e-06,
+        0.0004235273802269789
+      ]
+    },
+    "parameter_only": {
+      "energy_score_difference_N": 0.5526235020281522,
+      "paired_95_percent_interval_N": [
+        0.5431026958107151,
+        0.5613594535511154
+      ]
+    },
+    "unpaired": {
+      "energy_score_difference_N": 3.032658960346229e-06,
+      "paired_95_percent_interval_N": [
+        8.352922375879878e-10,
+        9.063532410298312e-06
+      ]
+    },
+    "pact": {
+      "energy_score_difference_N": 0.0,
+      "paired_95_percent_interval_N": [
+        0.0,
+        0.0
+      ]
+    },
+    "bayes_replay": {
+      "energy_score_difference_N": 0.0,
+      "paired_95_percent_interval_N": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "checks": {
+    "source_permutation_error_N": 0.0,
+    "bayesian_replay_error_N": 0.0,
+    "numerical_oracle_max_error_N": 7.638334409421077e-14,
+    "equilibrium_max_residual_N": 1.7008616737257398e-13,
+    "tangent_max_relative_error": 1.1924896118184085e-09,
+    "increment_halving_error_N": 8.348877145181177e-14,
+    "energy_branch_0": {
+      "max_energy_residual_Nmm": 1.3322676295501878e-15,
+      "work_Nmm": 2.569071937210874,
+      "dissipation_Nmm": 1.801715265866209
+    },
+    "energy_branch_1": {
+      "max_energy_residual_Nmm": 1.3322676295501878e-15,
+      "work_Nmm": 2.3765195743928023,
+      "dissipation_Nmm": 1.2361968306922444
+    },
+    "symmetric_target_branch_gap_N": 0.0,
+    "identical_members_branch_gap_N": 0.0,
+    "virgin_reset_pact_error_N": 0.0
+  },
+  "sweep_cases": 27,
+  "virtual_records_per_noise": 512
+}
