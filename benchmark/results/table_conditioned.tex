@@ -1,0 +1,25 @@
+\begin{table}[ht]
+\centering\small
+\caption{Post-probe prediction on 512 virtual records at each noise level. All methods receive the same posterior weights; only the 510 later increments are scored. Values are mean per-record scores. The complete-replay control coincides with PACT in every row.}
+\label{tab:transfer_conditioned}
+\begin{tabular}{@{}llrr@{}}
+\toprule
+Probe SD (N) & Representation & RMSE (N) & ES (N) \\
+\midrule
+0.05 & Mean parameters + replay & $<10^{-12}$ & $<10^{-12}$ \\
+ & Parameter-only, state reset & 0.553 & 0.553 \\
+ & Unpaired states & $<10^{-12}$ & $<10^{-12}$ \\
+ & PACT & $<10^{-12}$ & $<10^{-12}$ \\
+\addlinespace
+0.15 & Mean parameters + replay & $1.53\times10^{-4}$ & $1.53\times10^{-4}$ \\
+ & Parameter-only, state reset & 0.553 & 0.553 \\
+ & Unpaired states & $8.16\times10^{-5}$ & $4.21\times10^{-6}$ \\
+ & PACT & $3.73\times10^{-5}$ & $1.18\times10^{-6}$ \\
+\addlinespace
+0.30 & Mean parameters + replay & 0.061 & 0.061 \\
+ & Parameter-only, state reset & 0.557 & 0.545 \\
+ & Unpaired states & 0.039 & 0.017 \\
+ & PACT & 0.026 & 0.012 \\
+\bottomrule
+\end{tabular}
+\end{table}
