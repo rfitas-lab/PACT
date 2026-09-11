@@ -1,0 +1,16 @@
+\begin{table}[ht]
+\centering\small
+\caption{Exact expected prediction scores before the probe. RMSE and energy score average over both equally probable truth assignments. Coverage and width refer to central 90\% discrete-law marginal intervals.}
+\label{tab:transfer_initial}
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+Representation & RMSE (N) & ES (N) & Coverage (\%) & Width (N) \\
+\midrule
+Mean parameters + replay & 0.440 & 0.440 & 27.3 & 0.000 \\
+Parameter-only, state reset & 0.956 & 0.864 & 63.4 & 0.374 \\
+Unpaired states & 0.336 & 0.207 & 100.0 & 0.991 \\
+PACT & 0.275 & 0.138 & 100.0 & 0.402 \\
+Bayesian parameter replay & 0.275 & 0.138 & 100.0 & 0.402 \\
+\bottomrule
+\end{tabular}
+\end{table}
