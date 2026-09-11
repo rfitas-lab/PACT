@@ -1,10 +1,10 @@
-# PACT — Persistent constitutive transfer
+# PACT: Constitutive Transfer Through Persistent Material Realizations
 
-This repository contains the non-manuscript research and reproducibility material associated with the PACT paper.
+This repository contains the non-manuscript research and reproducibility material associated with the PACT paper, **“PACT: Constitutive Transfer Through Persistent Material Realizations.”**
 
 ## Scope
 
-The repository is intentionally **paper-free**: it does not contain the manuscript PDF, LaTeX manuscript source, or journal/arXiv submission files. It contains the self-contained matched-information elastoplastic transfer benchmark used to test persistent constitutive transfer, together with the protocol, numerical implementation, verification records, result summaries, sensitivity sweep, and table/figure-generation code.
+The repository is intentionally **paper-free**: it does not contain the manuscript PDF, LaTeX manuscript source, or journal/arXiv submission files. It contains the self-contained matched-information elastoplastic transfer benchmark used to test constitutive transfer through persistent material realizations, together with the protocol, numerical implementation, verification records, result summaries, sensitivity sweep, and table/figure-generation code.
 
 The benchmark is a designed computational mechanics test, not an external experimental validation dataset. Two compression-only elastoplastic elements are observation-equivalent in the source setting but carry different persistent internal states; an asymmetric target exposes the consequences of discarding those states. All compared methods receive identical information.
 
