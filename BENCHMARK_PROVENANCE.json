@@ -1,0 +1,41 @@
+{
+  "manuscript_base": "Latest editable PACT package, with earlier main/SI assets retained",
+  "base_package_sha256": "8cbdc1acc1e5b3d9af505f5b0691252ec03decfe5d0ce9ae4eb33ebeeea5c52d",
+  "base_pdf_sha256": "3ac6365a1cd46f2df6234cde941c7d1515ca180c3aa92b34e2c541339f3861cd",
+  "protocol_sha256": "a621d8846bf7ded4d5260cb9a1bf7af906411b74f87ace28b4c2124cfe36a410",
+  "reference": "Independent piecewise-affine inversion of the same specified mechanical law",
+  "inference_reference_scope": "Designed model-matched computational test, with exact shared posterior weights; no new experimental data",
+  "application_simulations_rerun": false,
+  "new_benchmark_complete_in_package": true,
+  "main_figure_4": "benchmark/figures/transfer_test.pdf",
+  "prior_main_figure_4_relocated_to": "Figure S12; original artwork at assets/figure_04_artwork.pdf",
+  "new_supplement": "Section S7 and Figure S13",
+  "pdf_pages": 50,
+  "checks": {
+    "source_permutation_error_N": 0.0,
+    "bayesian_replay_error_N": 0.0,
+    "numerical_oracle_max_error_N": 7.638334409421077e-14,
+    "equilibrium_max_residual_N": 1.7008616737257398e-13,
+    "tangent_max_relative_error": 1.1924896118184085e-09,
+    "increment_halving_error_N": 8.348877145181177e-14,
+    "energy_branch_0": {
+      "max_energy_residual_Nmm": 1.3322676295501878e-15,
+      "work_Nmm": 2.569071937210874,
+      "dissipation_Nmm": 1.801715265866209
+    },
+    "energy_branch_1": {
+      "max_energy_residual_Nmm": 1.3322676295501878e-15,
+      "work_Nmm": 2.3765195743928023,
+      "dissipation_Nmm": 1.2361968306922444
+    },
+    "symmetric_target_branch_gap_N": 0.0,
+    "identical_members_branch_gap_N": 0.0,
+    "virgin_reset_pact_error_N": 0.0
+  },
+  "editorial_verification": {
+    "benchmark_files_compared": 17,
+    "all_unchanged": true,
+    "method": "SHA256 against previous source ZIP",
+    "new_simulations": false
+  }
+}
